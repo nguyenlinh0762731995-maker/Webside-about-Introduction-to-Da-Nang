@@ -1,0 +1,117 @@
+/* ===== RESET & FONT ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* ===== BODY ===== */
+body {
+    background: linear-gradient(to right, #e3f2fd, #f9fbff);
+    color: #333;
+    line-height: 1.7;
+}
+
+/* ===== HEADER ===== */
+header {
+    background: linear-gradient(135deg, #0077ff, #00c6ff);
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+header h1 {
+    font-size: 42px;
+    letter-spacing: 1px;
+}
+
+header p {
+    font-size: 20px;
+    margin-top: 12px;
+    opacity: 0.95;
+}
+
+/* ===== NAV ===== */
+nav {
+    background-color: white;
+    text-align: center;
+    padding: 15px 0;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav a {
+    color: #0077ff;
+    text-decoration: none;
+    margin: 0 18px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #ff6b6b;
+}
+
+/* ===== MAIN ===== */
+main {
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+/* ===== SECTION ===== */
+section {
+    background-color: white;
+    padding: 30px;
+    margin-bottom: 30px;
+    border-radius: 14px;
+    box-shadow: 0 12px 25px rgba(0,0,0,0.08);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 18px 35px rgba(0,0,0,0.12);
+}
+
+section h2 {
+    color: #0077ff;
+    margin-bottom: 15px;
+    font-size: 26px;
+}
+
+section p,
+section li {
+    font-size: 17px;
+}
+
+section ul {
+    margin-left: 22px;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    background: linear-gradient(135deg, #0077ff, #00c6ff);
+    color: white;
+    text-align: center;
+    padding: 25px 15px;
+    margin-top: 60px;
+    font-size: 15px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 32px;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 8px 10px;
+    }
+
+    section {
+        padding: 22px;
