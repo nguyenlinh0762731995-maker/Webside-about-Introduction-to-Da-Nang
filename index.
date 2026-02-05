@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Giới thiệu thành phố Đà Nẵng</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Thành phố Đà Nẵng</h1>
+        <p>Thành phố đáng sống nhất Việt Nam</p>
+    </header>
+
+    <nav>
+        <a href="#gioithieu">Giới thiệu</a>
+        <a href="#dulich">Du lịch</a>
+        <a href="#amthuc">Ẩm thực</a>
+        <a href="#vanhoa">Văn hóa</a>
+    </nav>
+
+    <main>
+        <section id="gioithieu">
+            <h2>Giới thiệu chung</h2>
+            <p>
+                Đà Nẵng là thành phố trực thuộc Trung ương, nằm ở miền Trung Việt Nam.
+                Thành phố nổi tiếng với môi trường sống trong lành, con người thân thiện
+                và tốc độ phát triển nhanh.
+            </p>
+        </section>
+
+        <section id="dulich">
+            <h2>Du lịch</h2>
+            <ul>
+                <li>Bãi biển Mỹ Khê</li>
+                <li>Bà Nà Hills</li>
+                <li>Cầu Rồng</li>
+                <li>Ngũ Hành Sơn</li>
+            </ul>
+        </section>
+
+        <section id="amthuc">
+            <h2>Ẩm thực</h2>
+            <p>
+                Đà Nẵng có nhiều món ăn đặc trưng như:
+                mì Quảng, bánh tráng cuốn thịt heo, bún chả cá…
+            </p>
+        </section>
+
+        <section id="vanhoa">
+            <h2>Con người và văn hóa</h2>
+            <p>
+                Người dân Đà Nẵng hiền hòa, thân thiện và mến khách.
+                Thành phố có nhiều lễ hội văn hóa đặc sắc thu hút du khách.
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 | Website giới thiệu Đà Nẵng</p>
+        <p>Sinh viên thực hiện bài tập web</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
