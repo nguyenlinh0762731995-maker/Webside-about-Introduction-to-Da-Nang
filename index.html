@@ -1,66 +1,287 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-    <meta charset="UTF-8">
-    <title>Giới thiệu thành phố Đà Nẵng</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Đà Nẵng — Thành phố đáng sống nhất Việt Nam</title>
+<meta name="description" content="Khám phá Đà Nẵng: điểm đến nổi bật, ẩm thực đặc trưng, con người và văn hóa của thành phố bên sông Hàn.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,600;0,700;1,500&family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header>
-        <h1>Thành phố Đà Nẵng</h1>
-        <p>Thành phố đáng sống nhất Việt Nam</p>
-    </header>
+<div class="progress-bar" id="progressBar"></div>
 
-    <nav>
-        <a href="#gioithieu">Giới thiệu</a>
-        <a href="#dulich">Du lịch</a>
-        <a href="#amthuc">Ẩm thực</a>
-        <a href="#vanhoa">Văn hóa</a>
-    </nav>
+<header class="site-header" id="siteHeader">
+    <div class="header-inner">
+        <a href="#top" class="brand">Đà Nẵng<span class="brand-dot">.</span></a>
 
-    <main>
-        <section id="gioithieu">
-            <h2>Giới thiệu chung</h2>
-            <p>
-                Đà Nẵng là thành phố trực thuộc Trung ương, nằm ở miền Trung Việt Nam.
-                Thành phố nổi tiếng với môi trường sống trong lành, con người thân thiện
-                và tốc độ phát triển nhanh.
+        <nav class="main-nav" id="mainNav">
+            <a href="#gioithieu">Giới thiệu</a>
+            <a href="#dulich">Điểm đến</a>
+            <a href="#amthuc">Ẩm thực</a>
+            <a href="#vanhoa">Con người</a>
+            <a href="#camnang">Cẩm nang</a>
+        </nav>
+
+        <button class="nav-toggle" id="navToggle" aria-label="Mở menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
+    </div>
+</header>
+
+<main id="top">
+
+    <!-- HERO -->
+    <section class="hero">
+        <svg class="hero-bg" viewBox="0 0 1440 800" preserveAspectRatio="xMidYMax slice" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <defs>
+                <linearGradient id="skyGrad" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#0B3D5C"/>
+                    <stop offset="55%" stop-color="#12557C"/>
+                    <stop offset="100%" stop-color="#1E7A8C"/>
+                </linearGradient>
+                <linearGradient id="flameGrad" x1="0" y1="0" x2="1" y2="0">
+                    <stop offset="0%" stop-color="#FF6B4A"/>
+                    <stop offset="100%" stop-color="#E8A33D"/>
+                </linearGradient>
+                <linearGradient id="waterGrad" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#0A2E45"/>
+                    <stop offset="100%" stop-color="#071F30"/>
+                </linearGradient>
+            </defs>
+            <rect width="1440" height="800" fill="url(#skyGrad)"/>
+
+            <!-- xa: dãy núi mờ -->
+            <path d="M0,430 L120,370 L260,420 L420,340 L600,410 L780,360 L960,420 L1140,370 L1300,415 L1440,390 L1440,560 L0,560 Z" fill="#12557C" opacity="0.55"/>
+
+            <!-- Cầu Rồng cách điệu: thân cầu dạng vòm với vảy, đầu rồng phun lửa -->
+            <g id="dragonBridge">
+                <path d="M120,560 C 420,300 1020,300 1320,560" fill="none" stroke="#0B3D5C" stroke-width="26" stroke-linecap="round"/>
+                <path d="M120,560 C 420,300 1020,300 1320,560" fill="none" stroke="#E8A33D" stroke-width="4" stroke-dasharray="2 22" stroke-linecap="round" opacity="0.85"/>
+                <!-- trụ cầu -->
+                <line x1="260" y1="560" x2="260" y2="430" stroke="#0B3D5C" stroke-width="10"/>
+                <line x1="500" y1="560" x2="500" y2="330" stroke="#0B3D5C" stroke-width="10"/>
+                <line x1="940" y1="560" x2="940" y2="330" stroke="#0B3D5C" stroke-width="10"/>
+                <line x1="1180" y1="560" x2="1180" y2="430" stroke="#0B3D5C" stroke-width="10"/>
+                <!-- đầu rồng + lửa -->
+                <g id="dragonHead" transform="translate(1300,552)">
+                    <path d="M0,0 C 20,-14 44,-14 62,-2 C 78,7 78,18 60,22 C 40,26 14,20 0,4 Z" fill="#0B3D5C"/>
+                    <path d="M18,-10 L10,-30 M30,-13 L28,-34" stroke="#0B3D5C" stroke-width="5" stroke-linecap="round"/>
+                    <g class="flame">
+                        <path d="M60,4 C 90,-6 120,2 148,-10 C 128,10 128,24 148,34 C 118,30 88,26 60,16 Z" fill="url(#flameGrad)"/>
+                    </g>
+                </g>
+            </g>
+
+            <!-- sông Hàn phản chiếu -->
+            <rect y="560" width="1440" height="240" fill="url(#waterGrad)"/>
+            <path d="M0,560 C 420,300 1020,300 1320,560" fill="none" stroke="#0B3D5C" stroke-width="18" stroke-linecap="round" opacity="0.28" transform="translate(0,60) scale(1,-0.35)" transform-origin="0 560"/>
+        </svg>
+
+        <div class="hero-content">
+            <p class="eyebrow eyebrow-light">Miền Trung Việt Nam</p>
+            <h1>Đà Nẵng</h1>
+            <p class="hero-sub"><em>Nơi sông Hàn gặp biển Đông</em></p>
+            <p class="hero-desc">
+                Thành phố trực thuộc Trung ương bên bờ sông Hàn — nơi núi, biển và
+                đô thị hiện đại giao thoa, được mệnh danh là thành phố đáng sống nhất Việt Nam.
             </p>
-        </section>
+            <a href="#gioithieu" class="scroll-cue">
+                <span>Khám phá</span>
+                <svg width="14" height="20" viewBox="0 0 14 20" fill="none"><path d="M7 1v16M1 11l6 6 6-6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+        </div>
+    </section>
 
-        <section id="dulich">
-            <h2>Du lịch</h2>
-            <ul>
-                <li>Bãi biển Mỹ Khê</li>
-                <li>Bà Nà Hills</li>
-                <li>Cầu Rồng</li>
-                <li>Ngũ Hành Sơn</li>
+    <!-- GIỚI THIỆU -->
+    <section id="gioithieu" class="section reveal">
+        <div class="section-inner">
+            <p class="eyebrow">Tổng quan</p>
+            <h2>Giữa núi và biển</h2>
+            <div class="intro-grid">
+                <p class="lead">
+                    Đà Nẵng nằm ở vị trí trung độ của Việt Nam, cách đều Hà Nội và
+                    Thành phố Hồ Chí Minh — điểm giao thoa thuận lợi giữa Bắc và Nam.
+                    Thành phố nổi tiếng với môi trường sống trong lành, quy hoạch đô thị
+                    hiện đại, con người thân thiện và tốc độ phát triển nhanh chóng
+                    trong hai thập kỷ qua.
+                </p>
+                <p>
+                    Nằm bên bờ vịnh hình móng ngựa, được núi Bà Nà che chắn ở phía tây
+                    và bán đảo Sơn Trà ôm trọn ở phía đông, Đà Nẵng sở hữu địa hình đa
+                    dạng hiếm có: từ đèo Hải Vân hùng vĩ, những bãi biển cát trắng trải
+                    dài, đến khu rừng nguyên sinh ngay trong lòng thành phố.
+                </p>
+            </div>
+
+            <div class="stat-row">
+                <div class="stat">
+                    <span class="stat-num">1888</span>
+                    <span class="stat-label">Năm hình thành cảng thị</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-num">6</span>
+                    <span class="stat-label">Quận trung tâm</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-num">30km</span>
+                    <span class="stat-label">Bờ biển trải dài</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ĐIỂM ĐẾN -->
+    <section id="dulich" class="section section-tint reveal">
+        <div class="section-inner">
+            <p class="eyebrow">Khám phá</p>
+            <h2>Điểm đến nổi bật</h2>
+            <p class="lead">Sáu gương mặt tiêu biểu nhất của thành phố, mỗi nơi một sắc thái riêng.</p>
+
+            <div class="card-grid">
+                <article class="place-card">
+                    <div class="place-icon">🐉</div>
+                    <h3>Cầu Rồng</h3>
+                    <p>Biểu tượng của thành phố, phun lửa và phun nước vào tối thứ Sáu, Bảy, Chủ Nhật lúc 21h.</p>
+                </article>
+                <article class="place-card">
+                    <div class="place-icon">🌉</div>
+                    <h3>Bà Nà Hills</h3>
+                    <p>Khu du lịch trên núi với Cầu Vàng nổi tiếng, khí hậu se lạnh quanh năm như "Đà Lạt thu nhỏ".</p>
+                </article>
+                <article class="place-card">
+                    <div class="place-icon">🏖️</div>
+                    <h3>Bãi biển Mỹ Khê</h3>
+                    <p>Từng được tạp chí Forbes bình chọn là một trong những bãi biển quyến rũ nhất hành tinh.</p>
+                </article>
+                <article class="place-card">
+                    <div class="place-icon">⛰️</div>
+                    <h3>Ngũ Hành Sơn</h3>
+                    <p>Cụm năm ngọn núi đá vôi tượng trưng cho Kim - Mộc - Thủy - Hỏa - Thổ, với hang động và chùa cổ.</p>
+                </article>
+                <article class="place-card">
+                    <div class="place-icon">🐒</div>
+                    <h3>Bán đảo Sơn Trà</h3>
+                    <p>Lá phổi xanh của thành phố, nơi sinh sống của voọc chà vá chân nâu quý hiếm.</p>
+                </article>
+                <article class="place-card">
+                    <div class="place-icon">🏛️</div>
+                    <h3>Bảo tàng Điêu khắc Chăm</h3>
+                    <p>Bộ sưu tập điêu khắc Chăm Pa lớn nhất thế giới, minh chứng cho một nền văn minh rực rỡ.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- ẨM THỰC -->
+    <section id="amthuc" class="section reveal">
+        <div class="section-inner">
+            <p class="eyebrow">Hương vị</p>
+            <h2>Ẩm thực Đà Thành</h2>
+            <p class="lead">Những món ăn dân dã làm nên bản sắc ẩm thực miền Trung.</p>
+
+            <ul class="dish-list">
+                <li>
+                    <span class="dish-name">Mì Quảng</span>
+                    <span class="dish-desc">Sợi mì vàng, nước dùng sánh đậm, ăn kèm bánh tráng nướng và đậu phộng.</span>
+                </li>
+                <li>
+                    <span class="dish-name">Bánh tráng cuốn thịt heo</span>
+                    <span class="dish-desc">Thịt heo hai đầu da luộc, cuốn cùng rau sống và bánh tráng, chấm mắm nêm.</span>
+                </li>
+                <li>
+                    <span class="dish-name">Bún chả cá</span>
+                    <span class="dish-desc">Nước dùng ngọt thanh từ xương cá, chả cá chiên hoặc hấp thơm lừng.</span>
+                </li>
+                <li>
+                    <span class="dish-name">Bánh xèo</span>
+                    <span class="dish-desc">Bánh giòn rụm nhân tôm thịt giá đỗ, cuốn bánh tráng chấm mắm chua ngọt.</span>
+                </li>
+                <li>
+                    <span class="dish-name">Ốc hút</span>
+                    <span class="dish-desc">Món vặt vỉa hè trứ danh, xào sả ớt cay nồng, nhâm nhi buổi tối.</span>
+                </li>
+                <li>
+                    <span class="dish-name">Bê thui Cầu Mống</span>
+                    <span class="dish-desc">Thịt bê thui vàng ươm, chấm mắm nêm pha gừng tỏi đặc trưng xứ Quảng.</span>
+                </li>
             </ul>
-        </section>
+        </div>
+    </section>
 
-        <section id="amthuc">
-            <h2>Ẩm thực</h2>
-            <p>
-                Đà Nẵng có nhiều món ăn đặc trưng như:
-                mì Quảng, bánh tráng cuốn thịt heo, bún chả cá…
-            </p>
-        </section>
-
-        <section id="vanhoa">
+    <!-- CON NGƯỜI & VĂN HÓA -->
+    <section id="vanhoa" class="section section-tint reveal">
+        <div class="section-inner">
+            <p class="eyebrow">Bản sắc</p>
             <h2>Con người và văn hóa</h2>
-            <p>
-                Người dân Đà Nẵng hiền hòa, thân thiện và mến khách.
-                Thành phố có nhiều lễ hội văn hóa đặc sắc thu hút du khách.
-            </p>
-        </section>
-    </main>
+            <div class="intro-grid">
+                <p class="lead">
+                    Người Đà Nẵng hiền hòa, phóng khoáng và mến khách — chất phóng khoáng
+                    của miền biển hòa cùng nếp sống đô thị văn minh. Thành phố nhiều năm
+                    liền được đánh giá là nơi có chỉ số hài lòng của người dân cao hàng
+                    đầu cả nước.
+                </p>
+                <p>
+                    Đà Nẵng cũng là nơi tổ chức <strong>Lễ hội Pháo hoa Quốc tế
+                    (DIFF)</strong> thường niên, quy tụ các đội thi đến từ nhiều quốc gia,
+                    biến bầu trời sông Hàn thành sân khấu ánh sáng mỗi mùa hè.
+                </p>
+            </div>
 
-    <footer>
-        <p>© 2026 | Website giới thiệu Đà Nẵng</p>
-        <p>Sinh viên thực hiện bài tập web</p>
-    </footer>
+            <div class="highlight-box">
+                <strong>Bạn có biết?</strong>
+                <span>Cầu Rồng chỉ phun lửa và phun nước vào tối thứ Sáu, thứ Bảy và Chủ Nhật, bắt đầu lúc 21:00 — hãy canh giờ nếu muốn chứng kiến trọn vẹn.</span>
+            </div>
+        </div>
+    </section>
 
-    <script src="script.js"></script>
+    <!-- CẨM NANG -->
+    <section id="camnang" class="section reveal">
+        <div class="section-inner">
+            <p class="eyebrow">Trước khi đi</p>
+            <h2>Cẩm nang du lịch</h2>
+
+            <div class="info-grid">
+                <div class="info-card">
+                    <h3>Thời điểm lý tưởng</h3>
+                    <p>Tháng 3 đến tháng 8, khi trời nắng ráo, biển êm — thích hợp tắm biển và tham quan ngoài trời.</p>
+                </div>
+                <div class="info-card">
+                    <h3>Di chuyển</h3>
+                    <p>Sân bay quốc tế Đà Nẵng nằm ngay trung tâm thành phố, kết nối thuận tiện với các tỉnh thành và quốc tế.</p>
+                </div>
+                <div class="info-card">
+                    <h3>Mẹo nhỏ</h3>
+                    <p>Thuê xe máy để chủ động khám phá, và nhớ ghé cầu Rồng vào cuối tuần để xem trình diễn phun lửa.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <div>
+            <a href="#top" class="brand brand-footer">Đà Nẵng<span class="brand-dot">.</span></a>
+            <p>Thành phố đáng sống nhất Việt Nam.</p>
+        </div>
+        <nav class="footer-nav">
+            <a href="#gioithieu">Giới thiệu</a>
+            <a href="#dulich">Điểm đến</a>
+            <a href="#amthuc">Ẩm thực</a>
+            <a href="#vanhoa">Con người</a>
+            <a href="#camnang">Cẩm nang</a>
+        </nav>
+    </div>
+    <p class="footer-credit"></p>
+</footer>
+
+<button class="back-to-top" id="backToTop" aria-label="Lên đầu trang">↑</button>
+
+<script src="script.js"></script>
 </body>
 </html>
